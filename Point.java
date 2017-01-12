@@ -10,6 +10,7 @@
 
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
+import java.lang.Math.*;
 
 public class Point implements Comparable<Point> {
 
@@ -100,11 +101,11 @@ public class Point implements Comparable<Point> {
         }
         else if(that.y > this.y || that.y == this.y && that.x > this.x)
         {
-            return 1;
+            return -1; //-1 if that point is greater
         }
         else
         {
-            return -1;
+            return 1; //1 if that point is not greater
         }
     }
 
@@ -153,6 +154,7 @@ public class Point implements Comparable<Point> {
         /* DO NOT MODIFY */
         return "(" + x + ", " + y + ")";
     }
+    
 
     /**
      * Unit tests the Point data type.
